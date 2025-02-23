@@ -1,6 +1,6 @@
 # Deadline Reminder
 
-Deadline Reminder is a microservice that stores and retrieves deadlines. It can send deadline reminders, add new deadlines, update existing deadlines, or delete existing deadlines. It uses a JSON file ("deadlines.json") to store to and retrieve from.
+Deadline Reminder is a microservice that stores and retrieves deadlines. It can send deadline reminders, add new deadlines, update existing deadlines, or delete existing deadlines. It uses a JSON file (`deadlines.json`) to store to and retrieve from.
 
 ## Content
 
@@ -19,7 +19,7 @@ Deadline Reminder is a microservice that stores and retrieves deadlines. It can 
 1. You can run this microservice locally using a terminal or an IDE.
 2. Ensure that [Python](https://www.python.org/) 3.12 is installed on your system.
 3. This microservice uses ZeroMQ as its communication pipeline. Please make sure that [ZeroMQ](https://zeromq.org/download/) is installed on your system.
-4. Do not move, change, rename. or delete the "deadlines.json" file without making the necessary changes to "deadline_reminder.py" to accommodate.
+4. Do not move, change, rename. or delete the `deadlines.json` file without making the necessary changes to `deadline_reminder.py` to accommodate.
 5. Ensure the port that is being used by the microservice and ZeroMQ is open/available. If not, use a different port.
 
 ### Execution
@@ -39,27 +39,27 @@ To stop the process, use the following keys on your keyboard: Ctrl+C
 
 Once the microservice is up and running, you can send it requests by connecting to it via ZeroMQ.
 
-For guidance on establishing a connection with the microservice, refer to [ZeroMQ's documentation](https://zeromq.org/get-started/?language=python&library=pyzmq#). Additionally, refer to the "test_main.py" file for an example, and to see everything in action.
+For guidance on establishing a connection with the microservice, refer to [ZeroMQ's documentation](https://zeromq.org/get-started/?language=python&library=pyzmq#). Additionally, refer to the `test_main.py` file for an example, and to see everything in action.
 
-To send a request, the request must be in the form of a JSON: {"key": "value"}
+To send a request, the request must be in the form of a JSON: `{"key": "value"}`
 
-The request should at least have the following: {"action": "[something]"}
+The request should at least have the following: `{"action": "[something]"}`
 
-The microservice will look for the following values for "action" (replace with "[something]"):
+The microservice will look for the following values for `action` (replace with `"[something]"`):
 
-- "get_deadlines"
-- "set_deadline"
-- "update_deadline"
-- "delete_deadline"
+- `"get_deadlines"`
+- `"set_deadline"`
+- `"update_deadline"`
+- `"delete_deadline"`
 
-If the value for "action" does not match any of the strings mentioned above, the microservice will send back an error.
+If the value for `"action"` does not match any of the strings mentioned above, the microservice will send back an error.
 
 Send a request using the following structure:
 
-- To get all the current deadlines: {"action": "get_deadlines"}
-- To add a new deadline: {"action": "set_deadline", "session": "[new session name]", "time": "[new time value]"}
-- To update an existing deadline: {"action": "get_deadline", "session": "[session name]", "time": "[time value]"}
-- To delete an existing deadline: {"action": "set_deadline", "session": "[session name]"}
+- To get all the current deadlines: `{"action": "get_deadlines"}`
+- To add a new deadline: `{"action": "set_deadline", "session": "[new session name]", "time": "[new time value]"}`
+- To update an existing deadline: `{"action": "get_deadline", "session": "[session name]", "time": "[time value]"}`
+- To delete an existing deadline: `{"action": "set_deadline", "session": "[session name]"}`
 
 To send a request, use the following outline [for Python]:
 
@@ -68,7 +68,7 @@ request = {"action": "get_deadlines"}
 socket.socket.send_json(request)
 ```
 
-Example Request: {"action": "set_deadline", "session": "Physics Study", "time": "2025-02-08T10:00:00"}
+Example Request: `{"action": "set_deadline", "session": "Physics Study", "time": "2025-02-08T10:00:00"}`
 
 ### Receiving Data
 
