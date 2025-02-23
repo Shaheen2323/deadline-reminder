@@ -1,7 +1,7 @@
 # Author: Shaheen Pedram
 # Date: 02/20/2025
-# Project: Deadline Reminder (Server)
-# Description: Retrieve, set, update, or delete deadline reminders stored in a JSON file per request from the client.
+# Project: Deadline Reminder (Test Program)
+# Description: Retrieve, set, update, or delete deadline reminders stored in a JSON file per request from a program.
 
 import zmq   # ZeroMQ (for communicating with the client)
 import json  # for 'dumps'
