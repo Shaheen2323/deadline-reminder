@@ -1,6 +1,6 @@
 # Author: Shaheen Pedram
 # Date: 02/22/2025
-# Project: Deadline Reminder (Test Program)
+# Project: Deadline Reminder (Microservice)
 # Description: Retrieve, set, update, or delete deadline reminders stored in a JSON file per request from a program.
 
 import zmq   # ZeroMQ (for communicating with the client)

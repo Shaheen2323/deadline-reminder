@@ -1,6 +1,6 @@
 # Deadline Reminder
 
-Deadline Reminder is a microservice that stores and retrieves deadlines. It can send deadline reminders, add new deadlines, update existing deadlines, or delete existing deadlines.
+Deadline Reminder is a microservice that stores and retrieves deadlines. It can send deadline reminders, add new deadlines, update existing deadlines, or delete existing deadlines. It uses a JSON file ("deadlines.json") to store to and retrieve from.
 
 ## Content
 

@@ -1,6 +1,6 @@
 # Author: Shaheen Pedram
 # Date: 02/22/2025
-# Project: Deadline Reminder (Microservice)
+# Project: Deadline Reminder (Test Program)
 # Description: Send 'retrieve', 'set', 'update', or 'delete' requests to the microservice for testing.
 
 import zmq   # ZeroMQ (for communicating with the server)
