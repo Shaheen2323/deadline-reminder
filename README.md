@@ -16,7 +16,7 @@ Deadline Reminder is a microservice that stores and retrieves deadlines. It can 
 
 ### Requirements
 
-1. You can run this microservice using a terminal or an IDE.
+1. You can run this microservice locally using a terminal or an IDE.
 2. Ensure that [Python](https://www.python.org/) 3.12 is installed on your system.
 3. This microservice uses ZeroMQ as its communication pipeline. Please make sure that [ZeroMQ](https://zeromq.org/download/) is installed on your system.
 4. Do not move, change, rename. or delete the "deadlines.json" file without making the necessary changes to "deadline_reminder.py" to accommodate.
